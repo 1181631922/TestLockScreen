@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <com.example.lock.GestureLockView
+        android:id="@+id/gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#0000" />
+	
+    <GridView 
+        android:id="@+id/gv_lock"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:listSelector="@android:color/transparent"
+        android:verticalSpacing="5dip"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:horizontalSpacing="5dip"
+        ></GridView>
+    
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/gv"
+        android:layout_below="@+id/gv_lock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="请绘制图形锁！"
+        android:textColor="@color/str_color_gray"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rel_botton"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+         >
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.05dip"
+            android:background="@color/str_color_gray"
+            />
+        <View 
+            android:id="@+id/view_bottton"
+            android:layout_width="0.05dip"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:background="@color/str_color_gray"
+            />
+        <Button 
+            android:id="@+id/btn_onDraw"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/view_bottton"
+            android:text="重绘"
+            android:textColor="@color/str_color_black"
+            android:background="@android:color/transparent"
+            />
+        <Button 
+            android:id="@+id/btn_finishDraw"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/view_bottton"
+            android:text="完成"
+            android:textColor="@color/str_color_black"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout>
+	<TextView 
+	    android:id="@+id/tv_forget_password"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:gravity="center"
+	    android:visibility="gone"
+	    android:layout_alignParentBottom="true"
+	    android:textColor="@color/str_color_black"
+	    android:textSize="16sp"
+	    android:text="忘记密码？"
+	    />
+</RelativeLayout>
